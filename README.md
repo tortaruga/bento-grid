@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-bento-grid-layout-with-sass-vGCt52WQly](https://www.frontendmentor.io/solutions/responsive-bento-grid-layout-with-sass-vGCt52WQly)
 - Live Site URL: [https://tortaruga.github.io/bento-grid/](https://tortaruga.github.io/bento-grid/)
 
 ## My process
