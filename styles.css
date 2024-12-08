@@ -225,7 +225,7 @@ a:hover {
   .grid {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, max-content);
-    width: clamp(87.5rem, 90%, 50rem);
+    width: clamp(75rem, 90%, 50rem);
     margin: auto;
     grid-template-areas: "create-post hero hero social-media" "create-post multiple-platforms schedule social-media" "ai multiple-platforms schedule social-media" "ai audience-growth follower-growth follower-growth";
   }
@@ -256,11 +256,13 @@ a:hover {
   }
   .multiple-platforms {
     grid-area: multiple-platforms;
-    overflow: hidden;
-    padding: 2rem;
+    overflow-x: hidden;
+    padding-left: 2rem;
+    aspect-ratio: 1;
   }
   .multiple-platforms-title {
     max-width: 15.625rem;
+    font-size: calc(1.2rem + 1vw);
   }
   .multiple-platforms-img {
     width: 150%;
