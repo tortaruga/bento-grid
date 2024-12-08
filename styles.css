@@ -1,0 +1,250 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "regular";
+  background-color: rgb(243, 243, 243);
+  color: hsl(0, 0%, 7%);
+}
+
+@font-face {
+  font-family: "regular";
+  src: url(./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf);
+}
+@font-face {
+  font-family: "italic";
+  src: url(./assets/fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf);
+}
+.italic {
+  font-family: "italic";
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 1.5rem;
+  padding: 1rem;
+  margin-block: 1.5rem;
+  max-width: 100%;
+}
+
+.item {
+  width: 100%;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.hero {
+  background-color: hsl(256, 67%, 59%);
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: calc(2.5rem + 1vw);
+  font-weight: 500;
+  line-height: 95%;
+}
+
+.hero-span {
+  color: hsl(39, 100%, 71%);
+}
+
+.hero-stars {
+  width: 60%;
+}
+
+.hero-paragraph {
+  color: hsl(31, 66%, 93%);
+  margin: 0.5rem;
+}
+
+.multiple-platforms {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.multiple-platforms-title {
+  font-size: calc(1.375rem + 1vw);
+  margin-bottom: 0rem;
+  line-height: 95%;
+}
+
+.multiple-platforms-img {
+  width: 100%;
+}
+
+.schedule {
+  background-color: hsl(39, 100%, 71%);
+  overflow: hidden;
+  position: relative;
+  min-height: 15.625rem;
+}
+
+.schedule-title {
+  font-size: calc(1.375rem + 1vw);
+  margin-bottom: 0rem;
+  line-height: 95%;
+  margin-bottom: 0;
+  max-width: 18.75rem;
+}
+
+.schedule-img {
+  width: 70%;
+  position: relative;
+  bottom: -20%;
+}
+
+.social-media {
+  background-color: hsl(254, 88%, 90%);
+  text-align: center;
+}
+
+.social-media-title {
+  font-size: calc(1.375rem + 1vw);
+  margin-bottom: 0rem;
+  line-height: 95%;
+  margin-block-end: 1.5rem;
+}
+
+.social-media-img {
+  width: 100%;
+}
+
+.social-media-paragraph {
+  padding-inline: 1rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: calc(1.125rem + 1vw);
+}
+
+.follower-growth {
+  background-color: hsl(256, 67%, 59%);
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+
+.follower-growth-img {
+  width: 70%;
+  margin: auto;
+}
+
+.follower-growth-title {
+  font-weight: 500;
+  line-height: 95%;
+  padding-inline: 2rem;
+}
+
+.audience-growth {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.audience-growth-img {
+  width: 60%;
+}
+
+.audience-growth-paragraph {
+  font-size: calc(2.5rem + 1vw);
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-block: 0 1.5rem;
+}
+
+.audience-growth-span {
+  font-size: calc(1.125rem + 1vw);
+}
+
+.create-post {
+  background-color: hsl(31, 66%, 93%);
+}
+
+.create-post-img {
+  width: 65%;
+}
+
+.create-post-title {
+  font-size: calc(1.375rem + 1vw);
+  margin-bottom: 0rem;
+  line-height: 95%;
+  margin-block: 0 1.5rem;
+}
+
+.create-post-span {
+  color: hsl(256, 67%, 59%);
+}
+
+.ai {
+  background-color: hsl(39, 100%, 71%);
+}
+
+.ai-img {
+  width: 70%;
+}
+
+.ai-title {
+  font-size: calc(1.375rem + 1vw);
+  margin-bottom: 0rem;
+  line-height: 95%;
+  margin-block-end: 1.5rem;
+}
+
+footer {
+  padding: 2rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 36rem) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, max-content);
+    width: clamp(75rem, 90%, 50rem);
+    margin: auto;
+    grid-template-areas: "create-post hero hero social-media" "create-post multiple-platforms schedule social-media" "ai multiple-platforms schedule social-media" "ai audience-growth follower-growth follower-growth";
+  }
+  .create-post {
+    grid-area: create-post;
+  }
+  .ai {
+    grid-area: ai;
+  }
+  .hero {
+    grid-area: hero;
+  }
+  .social-media {
+    grid-area: social-media;
+  }
+  .multiple-platforms {
+    grid-area: multiple-platforms;
+  }
+  .schedule {
+    grid-area: schedule;
+  }
+  .audience-growth {
+    grid-area: audience-growth;
+  }
+  .follower-growth {
+    grid-area: follower-growth;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .follower-growth-img {
+    width: 40%;
+  }
+  .follower-growth-title {
+    padding-inline: 0;
+  }
+}/*# sourceMappingURL=styles.css.map */
