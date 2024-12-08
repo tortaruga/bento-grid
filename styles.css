@@ -51,6 +51,7 @@ body {
   font-size: calc(2.5rem + 1vw);
   font-weight: 500;
   line-height: 95%;
+  padding-inline: 2rem;
 }
 
 .hero-span {
@@ -123,7 +124,7 @@ body {
 }
 
 p {
-  font-size: calc(1.125rem + 1vw);
+  font-size: 1.125rem;
 }
 
 .follower-growth {
@@ -138,6 +139,7 @@ p {
 }
 
 .follower-growth-title {
+  font-size: calc(2rem + 1vw);
   font-weight: 500;
   line-height: 95%;
   padding-inline: 2rem;
@@ -162,7 +164,7 @@ p {
 }
 
 .audience-growth-span {
-  font-size: calc(1.125rem + 1vw);
+  font-size: 1.125rem;
 }
 
 .create-post {
@@ -205,31 +207,72 @@ footer {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: hsl(256, 67%, 59%);
+  font-weight: 500;
+}
+a:hover {
+  color: hsl(39, 100%, 71%);
+}
+
 @media screen and (min-width: 36rem) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 56.25rem) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, max-content);
-    width: clamp(75rem, 90%, 50rem);
+    width: clamp(87.5rem, 90%, 50rem);
     margin: auto;
     grid-template-areas: "create-post hero hero social-media" "create-post multiple-platforms schedule social-media" "ai multiple-platforms schedule social-media" "ai audience-growth follower-growth follower-growth";
   }
   .create-post {
     grid-area: create-post;
+    padding-top: 5rem;
   }
   .ai {
     grid-area: ai;
+    padding-inline-start: 2rem;
+  }
+  .ai-img {
+    width: 100%;
   }
   .hero {
     grid-area: hero;
   }
   .social-media {
     grid-area: social-media;
+    text-align: start;
+    padding-left: 2rem;
+    overflow: hidden;
+  }
+  .social-media-img {
+    position: relative;
+    left: 5%;
+    width: 170%;
   }
   .multiple-platforms {
     grid-area: multiple-platforms;
+    overflow: hidden;
+    padding: 2rem;
+  }
+  .multiple-platforms-title {
+    max-width: 15.625rem;
+  }
+  .multiple-platforms-img {
+    width: 150%;
   }
   .schedule {
     grid-area: schedule;
+    padding-inline: 2rem;
+    aspect-ratio: 1;
+  }
+  .schedule-img {
+    width: 100%;
+    bottom: -10%;
   }
   .audience-growth {
     grid-area: audience-growth;
@@ -240,11 +283,13 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 2rem;
   }
   .follower-growth-img {
-    width: 40%;
+    width: 50%;
   }
   .follower-growth-title {
     padding-inline: 0;
+    text-align: start;
   }
 }/*# sourceMappingURL=styles.css.map */
